@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Game</title></head>
+      <body>
+        <h1>GUESS THE NUMBER</h1>
+        <input id="guessnum">
+        <button onclick="total()">Result</button>
+        <p id="result"></p>
+        <b id="score" >YOUR SCORE = 10</b>
+    <script>
+        var guessnum=document.getElementById("guessnum")
+        var result=document.getElementById("result")
+        var score=document.getElementById("score")
+        var a=Math.floor(Math.random()*10+1)
+        var totalscore=10
+        function total()
+        {
+            var b=guessnum.value
+            if(a==b){
+                result.textContent="You won"
+                alert("You won")
+            }
+            else{
+                 result.textContent="You loss"
+                 totalscore=totalscore-1
+                 score.textContent="Your score: "+totalscore
+            }
+        }
+    </script>
+      </body>
+</html>
